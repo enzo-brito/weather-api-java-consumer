@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Weather Result</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="weather-result.css">
+
+</head>
+<body class="d-flex-center">
+	<div class="container result-container">
+		<h2 class="larger-text">Weather Result</h2>
+		<br>
+		<div th:if="${weatherData != null}">
+			<table class="weather-table">
+				<tr>
+					<th>City:</th>
+					<td th:text="${weatherData.cityName}"></td>
+				</tr>
+				<tr>
+					<th>Description:</th>
+					<td th:text="${weatherData.weatherDescription}"></td>
+				</tr>
+				<tr>
+					<th>Temperature:</th>
+					<td><span th:text="${weatherData.temperature}"></span> <span
+						class="icon" style="color: #007bff;">&#x2103;</span></td>
+				</tr>
+				<tr>
+					<th>Humidity:</th>
+					<td><span th:text="${weatherData.humidity}"></span> <span
+						class="icon" style="color: #007bff;">&#x1F4A7;</span></td>
+				</tr>
+				<tr>
+					<th>Wind Speed:</th>
+					<td><span th:text="${weatherData.windSpeed}"></span> <span
+						class="icon" style="color: #007bff;">km/h</span></td>
+				</tr>
+				<tr>
+					<th>Pressure:</th>
+					<td><span th:text="${weatherData.pressure}"></span> <span
+						class="icon" style="color: #007bff;">hPa</span></td>
+				</tr>
+				<tr>
+					<th>Last Updated:</th>
+					<td><span th:text="${weatherData.lastUpdated}"></span></td>
+				</tr>
+			</table>
+		</div>
+		<div th:if="${weatherData == null}">
+			<p class="error-message larger-text">Error retrieving weather
+				data. Please try again.</p>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

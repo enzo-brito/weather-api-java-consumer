@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Weather App</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="weather-form.css">
+</head>
+<body class="d-flex align-items-center justify-content-center vh-100">
+	<div class="container custom-container">
+		<div class="sun row justify-content-center">
+			<div class="col-md-6">
+				<div class="weather-form text-center">
+					<h2 class="mb-4">Weather App</h2>
+					<form action="/weather" method="post">
+						<div class="form-group">
+							<label for="city" class="sr-only">Enter City</label> <input
+								type="text"
+								class="form-control form-control-lg custom-input text-center"
+								id="city" name="city" placeholder="Enter City" required>
+							<div class="invalid-feedback">Please enter a city</div>
+						</div>
+						<button type="submit" class="btn custom-btn">Get Weather</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
