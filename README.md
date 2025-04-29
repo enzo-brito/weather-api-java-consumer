@@ -3,7 +3,7 @@
 
 [![Status](https://img.shields.io/badge/status-finalizado-green.svg)]()  
 [![Java](https://img.shields.io/badge/Java-11+-red.svg)]()  
-[![Spring Boot](https://img.shields.io/badge/Spring Boot-2.5+-green.svg)]()  
+[![Spring](https://img.shields.io/badge/Spring%20Boot-2.5+-green.svg)]()  
 [![Thymeleaf](https://img.shields.io/badge/Thymeleaf-brightgreen.svg)]()
 
 > Projeto concluído: aplicação de previsão do tempo em **Java** com **Spring Boot** e **Thymeleaf**, consumindo API externa para exibir temperatura, umidade, vento e pressão.
